@@ -15,13 +15,23 @@ cin>>t;
 cin.ignore();
 while(t--)
 {
-  int n,k;
-  cin>>n>>K;
-  vector<int> a(n);
-  for (int j=0;j<n;j++) {
-  cin>>a[j];
+  int a,b;
+  cin>>a>>b;
+  int c = 0;
+  while(a!=b)
+  {
+    if(a>b)
+    {
+      c+=ceil((double)a/2.0);
+      a-=ceil((double)a/2.0);
+    }
+    else
+    {
+      c+=ceil((double)b/2.0);
+      b-=ceil((double)b/2.0);
+    }
   }
-  
+  cout<<c<<el;
 }
 return 0;
 }
